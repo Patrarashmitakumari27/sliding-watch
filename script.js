@@ -1,33 +1,37 @@
 const data = [
     {
-      "title": "Refined Timepieces",
-      "subtitle": "Choose Luxury, Choose Us",
-      "description": "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
-      "price": "$599.00",
+      "title": "Exquisite Watches",
+      "subtitle1": "Gold Luxury,",
+      "subtitle2": "Choose Us",
+      "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style With Timeless Elegance and Precision Craftsmanship - watch",
+      "price": "$499.00",
       "image": "./images/Group 4 (2).png",
       "backgroundColor": { from: "#f4a764", to: "#ffdec2" },
     },
     {
-      "title": "Elite Watches",
-      "subtitle": "Exude Confidence",
-      "description": "Timeless sophistication for every occasion, crafted to perfection to complement your lifestyle.",
-      "price": "$699.00",
+      "title": "Dainty Timepieces",
+      "subtitle1": "Sliver Luxury,",
+      "subtitle2": "Choose Us",
+      "description": "Explore the ideal Timeplece for Any Moment and Enhance Your Style with Timeless Sophistication and impeccable Craftmanship - timepiece",
+      "price": "$469.00",
       "image": "images/Watches.png",
       "backgroundColor": { from: "#adb0b0", to: "#e1e1e1" },
     },
     {
-      "title": "Luxury Timepieces",
-      "subtitle": "Own the Moment",
-      "description": "Designed with precision, each watch embodies unmatched craftsmanship and elegance.",
-      "price": "$799.00",
+      "title": "Elegant Timepieces",
+      "subtitle1": "Choose Luxury,",
+      "subtitle2": "Choose Us",
+      "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style With Timeless Elegance and Precision Craftsmanship - watch",
+      "price": "$529.00",
       "image": "./images/Group 6.png",
       "backgroundColor": { from: "#30a357", to: "#75e39a" },
     },
     {
-      "title": "Classic Watches",
-      "subtitle": "Timeless Style",
-      "description": "Elevate your everyday look with classic designs and impeccable functionality.",
-      "price": "$899.00",
+      "title": "Refined Timepieces",
+      "subtitle1": "Choose Luxury,",
+      "subtitle2": "Choose Us",
+      "description": "Explore the ideal Timeplece for Any Moment and Enhance Your Style with Timeless Sophistication and impeccable Craftmanship - timepiece",
+      "price": "$599.00",
       "image": "images/Group 7.png",
       "backgroundColor": { from: "#f24f4f", to: "#ffa845" },
     }
@@ -35,7 +39,8 @@ const data = [
   
   
   const title = document.getElementById('title');
-  const subtitle = document.getElementById('subtitle');
+  const subtitle1 = document.getElementById('subtitle1');
+  const subtitle2 = document.getElementById('subtitle2');
   const description = document.getElementById('description');
   const price = document.getElementById('price');
   
@@ -62,7 +67,8 @@ const data = [
   splide.on('move', (newIndex) => {
     const currentItem = data[newIndex % data.length];
     title.textContent = currentItem.title;
-    subtitle.textContent = currentItem.subtitle;
+    subtitle1.textContent = currentItem.subtitle1;
+    subtitle2.textContent = currentItem.subtitle2;
     description.textContent = currentItem.description;
     price.textContent = currentItem.price;
   
