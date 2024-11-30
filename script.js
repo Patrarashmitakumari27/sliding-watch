@@ -57,10 +57,17 @@ const data = [
   const splide = new Splide('#carousel', {
     type: 'loop',
     perPage: 1,
-    autoplay: true,
+    autoplay: false,
     interval: 3000,
     arrows: true,
     pagination: false,
+    classes: {
+      arrows: 'splide__arrows dmrishabh-arrow',
+      arrow: 'splide__arrow your-class-arrow',
+      prev: 'splide__arrow--prev dmrishabh-arrow-prev',
+      next: 'splide__arrow--next dmrishabh-arrow-next',
+  },
+
   });
   
   
@@ -78,3 +85,15 @@ const data = [
   
   splide.mount();
   
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+    nav.classList.remove('open');
+  }
+});
