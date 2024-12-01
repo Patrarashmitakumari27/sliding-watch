@@ -63,7 +63,7 @@ const data = [
     perPage: 1,
     autoplay: false,
     interval: 3000,
-    speed: 2000,   
+    
     arrows: true,
     pagination: false,
     classes: {
