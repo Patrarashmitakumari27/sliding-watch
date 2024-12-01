@@ -23,7 +23,7 @@ const data = [
       "subtitle2": "Choose Us",
       "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style With Timeless Elegance and Precision Craftsmanship - watch",
       "price": "$529.00",
-      "image": "./images/Group 6.png",
+      "image": "./images/Watches (1).png",
       "backgroundColor": { from: "#30a357", to: "#75e39a" },
     },
     {
@@ -32,7 +32,7 @@ const data = [
       "subtitle2": "Choose Us",
       "description": "Explore the ideal Timeplece for Any Moment and Enhance Your Style with Timeless Sophistication and impeccable Craftmanship - timepiece",
       "price": "$599.00",
-      "image": "images/Group 7.png",
+      "image": "./images/Watches (2).png",
       "backgroundColor": { from: "#f24f4f", to: "#ffa845" },
     }
   ];
@@ -49,16 +49,21 @@ const data = [
   data.forEach(item => {
     const li = document.createElement('li');
     li.className = 'splide__slide';
-    li.innerHTML = `<img src="${item.image}" alt="${item.title}">`;
+    li.innerHTML =
+    `<div class="watch-container">
+    <img src="${item.image}" alt="${item.title}" class="watch-image">
+    <img src="./images/Ellipse 4 - Copy.png" alt="shadow" class="watch-shadow">
+    </div>`;
     list.appendChild(li);
   });
   
   
   const splide = new Splide('#carousel', {
-    type: 'loop',
+    type: 'fade',
     perPage: 1,
     autoplay: false,
     interval: 3000,
+    speed: 2000,   
     arrows: true,
     pagination: false,
     classes: {
